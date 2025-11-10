@@ -55,3 +55,23 @@ for (let i = 0; i < squadre.length; i++) {
     newArray.push(squadre[i].falliSubiti);
 }
 console.log(newArray);
+
+
+/**
+ * Snack 3 (Bonus)
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b). 
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. Non usare i metodi di array di JS 
+
+ */
+const numeri = [10, 20, 30, 40, 22, 11];
+function includedNum(array, num1, num2) {
+
+    const newArray = [];
+
+    for (let i = num1; i <= num2 && i < array.length; i++) {
+        newArray.push(array[i]);
+    }
+    return newArray;
+}
+let result = includedNum(numeri, 1, 3);
+console.log(result);
