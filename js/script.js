@@ -24,3 +24,34 @@ for (let i = 0; i < biciclette.length; i++) {
 console.log(`Il peso minore è: ${min}`);
 
 
+/**
+ * Snack2
+Creare un array di oggetti di squadre di calcio.
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+ */
+
+const squadre = [
+    { nome: "Juventus", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Inter", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Milan", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Napoli", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Roma", puntiFatti: 0, falliSubiti: 0 }
+];
+const newArray = [];
+
+for (let i = 0; i < squadre.length; i++) {
+    let curRandomNum = Math.floor(Math.random() * 10) + 1;
+    //console.log(curRandomNum);
+    squadre[i].puntiFatti = curRandomNum;
+    squadre[i].falliSubiti = curRandomNum;
+}
+console.log(squadre);
+
+for (let i = 0; i < squadre.length; i++) {
+    newArray.push(squadre[i].nome);
+    newArray.push(squadre[i].falliSubiti);
+}
+console.log(newArray);
