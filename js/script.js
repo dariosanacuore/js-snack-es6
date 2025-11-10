@@ -14,4 +14,13 @@ const biciclette = [
     { nome: "Pinarello Dogma F", peso: 6.9 }
 ];
 
+let min = biciclette[0].peso;
+for (let i = 0; i < biciclette.length; i++) {
+    //console.log(biciclette[i].nome);
+    if (biciclette[i].peso < min) {
+        min = biciclette[i].peso;
+    }
+}
+console.log(`Il peso minore è: ${min}`);
+
 
