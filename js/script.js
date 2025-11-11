@@ -15,13 +15,17 @@ const biciclette = [
 ];
 
 let min = biciclette[0].peso;
+let biciLeggera = biciclette[0];
 for (let i = 0; i < biciclette.length; i++) {
     //console.log(biciclette[i].nome);
     if (biciclette[i].peso < min) {
         min = biciclette[i].peso;
     }
+    if (biciclette[i].peso < biciLeggera.peso) {
+        biciLeggera = biciclette[i];
+    }
 }
-console.log(`Il peso minore è: ${min}`);
+console.log(`La bici ${biciLeggera.nome} con il peso minore è: ${min}`);
 
 
 /**
